@@ -1,6 +1,7 @@
 import csv
 import pandas as pd
 import random 
+from collections import Counter
 
 shifts = {"CTU": 0, "Input": 0, "Clinic": 0, "ER": 0, "Consult": 0, "Off": 0 }
 file_path = "test_sheet.csv"
@@ -28,31 +29,60 @@ def get_dict(table1):
     return shift_requirements_by_doctor
 
 def fill_schedule(doctors, schedule, weeks):
-
     doctor_availability = {doc: shifts.copy() for doc, shifts in doctors.items()}
+    
+    def calculate_score(doctor, shift_type, week, current_schedule):
+        week_list = list(current_schedule[doctor].keys())
+        week_index = week_list.index(week)
+        score = 0
+
+        # Penalize consecutive shifts
+        if week_index > 0 and current_schedule[doctor][week_list[week_index - 1]] == shift_type:
+            score -= 2  # Heavier penalty for immediate consecutive shifts
+        if week_index > 1 and current_schedule[doctor][week_list[week_index - 2]] == shift_type:
+            score -= 1  # Slight penalty for shift occurring two weeks ago
+
+        # Reward shifts that break consecutive patterns
+        if week_index > 0 and current_schedule[doctor][week_list[week_index - 1]] != shift_type:
+            score += 1  # Reward diversity in shifts
+
+        # Reward doctors with higher availability for this shift
+        score += doctor_availability[doctor][shift_type]
+
+        return score
 
     for week, week_requirements in weeks.items():
         remaining_requirements = week_requirements.copy()
-        for doctor, shifts in schedule.items():
-            if shifts.get(week) == "X":
+
+        # Shuffle doctors to introduce variability in the schedule
+        doctor_order = list(schedule.keys())
+        random.shuffle(doctor_order)
+
+        for doctor in doctor_order:
+            if schedule[doctor][week] == "X":  # Handle mandatory off weeks
+                remaining_requirements["Off"] -= 1
+                doctor_availability[doctor]["Off"] -= 1
                 continue
-            #Maybe subtract from "Off" if "Off" includes the designated weeks off
-            #shift_types = ["CTU", "Input", "Clinic", "ER", "Consult", "Off"]
-            shift_types = ["Clinic", "ER", "Off"]
-            random.shuffle(shift_types)
+
+            shift_types = ["ER", "Clinic", "Off"]
+            best_shift = None
+            best_score = float('-inf')
+            
             for shift_type in shift_types:
-                
-                if (
-                    remaining_requirements[shift_type] > 0
-                    and doctor_availability[doctor][shift_type] > 0
-                ):
-                    print(doctor)
-                    print(week)
-                    print()
-                    schedule[doctor][week] = shift_type
-                    remaining_requirements[shift_type] -= 1
-                    doctor_availability[doctor][shift_type] -= 1
-                    break
+                if remaining_requirements[shift_type] > 0 and doctor_availability[doctor][shift_type] > 0:
+                    score = calculate_score(doctor, shift_type, week, schedule)
+                    if score > best_score:
+                        best_score = score
+                        best_shift = shift_type
+
+            if best_shift:
+                if best_shift == "Off":
+                    schedule[doctor][week] = "X"
+                else:
+                    schedule[doctor][week] = best_shift
+
+                remaining_requirements[best_shift] -= 1
+                doctor_availability[doctor][best_shift] -= 1
 
     return schedule
 
@@ -77,12 +107,12 @@ weeks = get_dict(table3)
 '''
 
 doctors = {
-    "Doctor 1": {"ER": 3, "Clinic": 2, "Off": 2},
-    "Doctor 2": {"ER": 3, "Clinic": 3, "Off": 1},
-    "Doctor 3": {"ER": 3, "Clinic": 3, "Off": 1},
-    "Doctor 4": {"ER": 2, "Clinic": 4, "Off": 2},
-    "Doctor 5": {"ER": 4, "Clinic": 2, "Off": 2},
-    "Doctor 6": {"ER": 3, "Clinic": 3, "Off": 1},
+    "Doctor 1": {"ER": 4, "Clinic": 3, "Off": 3},
+    "Doctor 2": {"ER": 3, "Clinic": 3, "Off": 4},
+    "Doctor 3": {"ER": 3, "Clinic": 4, "Off": 3},
+    "Doctor 4": {"ER": 4, "Clinic": 2, "Off": 4},
+    "Doctor 5": {"ER": 3, "Clinic": 4, "Off": 3},
+    "Doctor 6": {"ER": 3, "Clinic": 4, "Off": 3},
 }
 
 schedule = {
@@ -95,16 +125,17 @@ schedule = {
 }
 
 weeks = {
-    "Week 1": {"ER": 3, "Clinic": 3, "Off": 2},
-    "Week 2": {"ER": 3, "Clinic": 3, "Off": 2},
-    "Week 3": {"ER": 3, "Clinic": 3, "Off": 2},
-    "Week 4": {"ER": 3, "Clinic": 3, "Off": 2},
-    "Week 5": {"ER": 3, "Clinic": 3, "Off": 2},
-    "Week 6": {"ER": 3, "Clinic": 3, "Off": 2},
-    "Week 7": {"ER": 3, "Clinic": 3, "Off": 2},
-    "Week 8": {"ER": 3, "Clinic": 3, "Off": 2},
-    "Week 9": {"ER": 3, "Clinic": 3, "Off": 2},
-    "Week 10": {"ER": 3, "Clinic": 3, "Off": 2},
+    # 20 ER, 20 CLINIC, 20 OFF
+    "Week 1": {"ER": 2, "Clinic": 2, "Off": 2},
+    "Week 2": {"ER": 2, "Clinic": 2, "Off": 2},
+    "Week 3": {"ER": 2, "Clinic": 2, "Off": 2},
+    "Week 4": {"ER": 2, "Clinic": 2, "Off": 2},
+    "Week 5": {"ER": 2, "Clinic": 2, "Off": 2},
+    "Week 6": {"ER": 2, "Clinic": 2, "Off": 2},
+    "Week 7": {"ER": 2, "Clinic": 2, "Off": 2},
+    "Week 8": {"ER": 2, "Clinic": 2, "Off": 2},
+    "Week 9": {"ER": 2, "Clinic": 2, "Off": 2},
+    "Week 10": {"ER": 2, "Clinic": 2, "Off": 2},
 }
 
 for i in doctors:
