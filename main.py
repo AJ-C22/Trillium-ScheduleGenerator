@@ -1,5 +1,6 @@
 import csv
 import pandas as pd
+import random 
 
 shifts = {"CTU": 0, "Input": 0, "Clinic": 0, "ER": 0, "Consult": 0, "Off": 0 }
 file_path = "test_sheet.csv"
@@ -27,7 +28,33 @@ def get_dict(table1):
     return shift_requirements_by_doctor
 
 def fill_schedule(doctors, schedule, weeks):
-    return
+
+    doctor_availability = {doc: shifts.copy() for doc, shifts in doctors.items()}
+
+    for week, week_requirements in weeks.items():
+        remaining_requirements = week_requirements.copy()
+        for doctor, shifts in schedule.items():
+            if shifts.get(week) == "X":
+                continue
+            #Maybe subtract from "Off" if "Off" includes the designated weeks off
+            #shift_types = ["CTU", "Input", "Clinic", "ER", "Consult", "Off"]
+            shift_types = ["Clinic", "ER", "Off"]
+            random.shuffle(shift_types)
+            for shift_type in shift_types:
+                
+                if (
+                    remaining_requirements[shift_type] > 0
+                    and doctor_availability[doctor][shift_type] > 0
+                ):
+                    print(doctor)
+                    print(week)
+                    print()
+                    schedule[doctor][week] = shift_type
+                    remaining_requirements[shift_type] -= 1
+                    doctor_availability[doctor][shift_type] -= 1
+                    break
+
+    return schedule
 
 def schedulify(d):
     print()
@@ -50,29 +77,39 @@ weeks = get_dict(table3)
 '''
 
 doctors = {
-    "Doctor 1": {"ER": 5, "Clinic": 4, "Off": 3},
-    "Doctor 2": {"ER": 4, "Clinic": 5, "Off": 3},
-    "Doctor 3": {"ER": 6, "Clinic": 3, "Off": 3},
+    "Doctor 1": {"ER": 3, "Clinic": 2, "Off": 2},
+    "Doctor 2": {"ER": 3, "Clinic": 3, "Off": 1},
+    "Doctor 3": {"ER": 3, "Clinic": 3, "Off": 1},
+    "Doctor 4": {"ER": 2, "Clinic": 4, "Off": 2},
+    "Doctor 5": {"ER": 4, "Clinic": 2, "Off": 2},
+    "Doctor 6": {"ER": 3, "Clinic": 3, "Off": 1},
 }
-
 
 schedule = {
-    "Doctor 1": {"Sept 30 - Oct 6": "X", "Oct 7 - Oct 13": None, "Oct 14 - Oct 20": None, "Oct 21 - Oct 27": None},
-    "Doctor 2": {"Sept 30 - Oct 6": None, "Oct 7 - Oct 13": "X", "Oct 14 - Oct 20": None, "Oct 21 - Oct 27": None},
-    "Doctor 3": {"Sept 30 - Oct 6": None, "Oct 7 - Oct 13": None, "Oct 14 - Oct 20": "X", "Oct 21 - Oct 27": None},
+    "Doctor 1": {"Week 1": "X", "Week 2": None, "Week 3": None, "Week 4": None, "Week 5": None, "Week 6": None, "Week 7": None, "Week 8": None, "Week 9": None, "Week 10": None},
+    "Doctor 2": {"Week 1": None, "Week 2": "X", "Week 3": None, "Week 4": None, "Week 5": None, "Week 6": None, "Week 7": None, "Week 8": None, "Week 9": None, "Week 10": None},
+    "Doctor 3": {"Week 1": None, "Week 2": None, "Week 3": "X", "Week 4": None, "Week 5": None, "Week 6": None, "Week 7": None, "Week 8": None, "Week 9": None, "Week 10": None},
+    "Doctor 4": {"Week 1": None, "Week 2": None, "Week 3": None, "Week 4": None, "Week 5": None, "Week 6": None, "Week 7": None, "Week 8": None, "Week 9": None, "Week 10": None},
+    "Doctor 5": {"Week 1": None, "Week 2": None, "Week 3": None, "Week 4": None, "Week 5": None, "Week 6": None, "Week 7": None, "Week 8": None, "Week 9": None, "Week 10": None},
+    "Doctor 6": {"Week 1": None, "Week 2": None, "Week 3": None, "Week 4": None, "Week 5": None, "Week 6": None, "Week 7": None, "Week 8": None, "Week 9": None, "Week 10": None},
 }
 
-
 weeks = {
-    "Sept 30 - Oct 6": {"ER": 3, "Clinic": 2, "Off": 1},
-    "Oct 7 - Oct 13": {"ER": 3, "Clinic": 2, "Off": 1},
-    "Oct 14 - Oct 20": {"ER": 3, "Clinic": 2, "Off": 1},
-    "Oct 21 - Oct 27": {"ER": 3, "Clinic": 2, "Off": 1},
+    "Week 1": {"ER": 3, "Clinic": 3, "Off": 2},
+    "Week 2": {"ER": 3, "Clinic": 3, "Off": 2},
+    "Week 3": {"ER": 3, "Clinic": 3, "Off": 2},
+    "Week 4": {"ER": 3, "Clinic": 3, "Off": 2},
+    "Week 5": {"ER": 3, "Clinic": 3, "Off": 2},
+    "Week 6": {"ER": 3, "Clinic": 3, "Off": 2},
+    "Week 7": {"ER": 3, "Clinic": 3, "Off": 2},
+    "Week 8": {"ER": 3, "Clinic": 3, "Off": 2},
+    "Week 9": {"ER": 3, "Clinic": 3, "Off": 2},
+    "Week 10": {"ER": 3, "Clinic": 3, "Off": 2},
 }
 
 for i in doctors:
     for j in doctors[i]:
         shifts[j] += int(doctors[i][j])
 
-schedulify(schedule)
+schedulify(fill_schedule(doctors,schedule,weeks))
 
