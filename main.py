@@ -3,7 +3,7 @@ import pandas as pd
 import random 
 from collections import Counter
 
-shifts = {"CTU": 0, "Input": 0, "Clinic": 0, "ER": 0, "Consult": 0, "Off": 0 }
+shifts = {"CTU": 0, "Inpt": 0, "Clinic": 0, "ER": 0, "Consult": 0, "Off": 0 }
 file_path = "test_sheet.csv"
 df = pd.read_csv(file_path, header = None)
 
@@ -25,6 +25,23 @@ def get_dict(table1):
     for doctor in table1.columns[1:]:
         doctor_shifts = table1.set_index("Shift")[doctor].to_dict()
         shift_requirements_by_doctor[doctor] = doctor_shifts
+
+    return shift_requirements_by_doctor
+
+def get_dict_int(table1):
+    table1.columns = ["Shift"] + table1.iloc[0, 1:].astype(str).tolist()  # Ensure column names are strings
+    table1 = table1[1:].reset_index(drop=True)  # Remove the duplicated header row
+
+    # Parse shift requirements per doctor
+    shift_requirements_by_doctor = {}
+
+    for doctor in table1.columns[1:]:  # Skip "Shift" column
+        shift_requirements_by_doctor[doctor] = (
+            table1.set_index("Shift")[doctor]
+            .dropna()
+            .astype(int)  # Convert values to integers
+            .to_dict()
+        )
 
     return shift_requirements_by_doctor
 
@@ -64,7 +81,7 @@ def fill_schedule(doctors, schedule, weeks):
                 doctor_availability[doctor]["Off"] -= 1
                 continue
 
-            shift_types = ["ER", "Clinic", "Off"]
+            shift_types = ["ER", "Clinic", "Off", "CTU", "Inpt", "Consult"]
             best_shift = None
             best_score = float('-inf')
             
@@ -92,7 +109,7 @@ def schedulify(d):
         print(i + ":\n")
         for j in d[i]:
             if d[i][j]:
-                print(j + " : " + d[i][j])
+                print(j + " : " + str(d[i][j]))
             else: 
                 print(j + ': N/A')
         print()      
@@ -100,12 +117,12 @@ def schedulify(d):
     return 
 
 #----------------------------------------------------------------#
-'''
-doctors = get_dict(table1)
-schedule = get_dict(table2)
-weeks = get_dict(table3)
-'''
 
+schedule = get_dict(table1)
+doctors = get_dict_int(table2)
+weeks = get_dict_int(table3)
+#print(weeks)
+'''
 doctors = {
     "Doctor 1": {"ER": 4, "Clinic": 3, "Off": 3},
     "Doctor 2": {"ER": 3, "Clinic": 3, "Off": 4},
@@ -137,10 +154,15 @@ weeks = {
     "Week 9": {"ER": 2, "Clinic": 2, "Off": 2},
     "Week 10": {"ER": 2, "Clinic": 2, "Off": 2},
 }
+'''
 
-for i in doctors:
-    for j in doctors[i]:
-        shifts[j] += int(doctors[i][j])
+# for i in doctors:
+#     for j in doctors[i]:
+#         shifts[j] += int(doctors[i][j])
+final_schedule = fill_schedule(doctors,schedule,weeks)
+df = pd.DataFrame(final_schedule)
 
-schedulify(fill_schedule(doctors,schedule,weeks))
+# Save to CSV file (replace None with empty strings)
+df.to_csv("schedule.csv", index=True, index_label="Week", na_rep="")
+
 

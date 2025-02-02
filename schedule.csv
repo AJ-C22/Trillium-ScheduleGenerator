@@ -1,0 +1,27 @@
+Week,R Chandi,R Sharma,K Monkman,M Sergi,F Vira,M Holmes,M Barboza,T Tang,P Khanna,J Levitz,N Pirzada,S Chugh,J Beswick,G Gaisano,S Narang,E Fernando,M Robinson,John You,A Wang,M Kuhlmann,S Piran,W Mansoor,M Graiss,N Hossain,S Zarabi,N Sharfuddin,S Rodic,M Beyaert,J Zhang,S Gupta,H Mahmood,K Eshak,Erin Campos
+Week 1,Inpt,Inpt,X,Inpt,X,X,CTU,X,X,X,Inpt,X,X,X,ER,X,X,X,X,X,X,Inpt,X,ER,X,X,X,X,X,Inpt,ER,X,X
+Week 2,ER,ER,X,X,X,X,X,X,Inpt,ER,X,X,Inpt,X,X,X,X,X,X,X,X,CTU,CTU,X,X,X,X,X,X,ER,X,Inpt,X
+Week 3,Inpt,Clinic,Inpt,X,X,Inpt,X,X,X,X,X,X,X,X,Inpt,X,X,X,X,X,X,X,X,X,X,X,Inpt,X,X,X,Inpt,X,X
+Week 4,ER,Inpt,ER,X,X,ER,X,X,X,Inpt,X,X,X,Inpt,Clinic,X,X,Inpt,X,X,X,Inpt,ER,X,X,Inpt,CTU,X,X,X,X,X,X
+Week 5,X,ER,Inpt,ER,X,X,X,X,X,X,ER,X,Inpt,X,X,X,X,X,X,X,X,X,X,X,X,X,ER,Inpt,X,CTU,X,X,Inpt
+Week 6,Inpt,Inpt,X,CTU,X,X,X,X,X,X,X,ER,X,ER,X,X,X,Inpt,X,X,ER,X,X,Inpt,Inpt,X,Inpt,X,X,X,X,X,X
+Week 7,ER,X,X,Inpt,X,X,X,X,X,X,X,X,X,Inpt,Inpt,ER,ER,Clinic,X,X,X,X,X,X,Clinic,X,CTU,X,X,X,ER,X,X
+Week 8,X,Inpt,X,X,X,Inpt,X,X,ER,X,X,Inpt,Inpt,X,ER,X,Inpt,,ER,X,X,X,X,X,X,Inpt,X,X,X,X,X,X,ER
+Week 9,Inpt,Inpt,X,ER,X,X,X,X,X,ER,X,X,ER,X,X,Clinic,Clinic,Inpt,X,Inpt,X,X,CTU,ER,Inpt,X,X,X,X,Inpt,X,X,X
+Week 10,ER,ER,Inpt,X,X,ER,CTU,X,X,X,Inpt,X,X,X,X,X,Inpt,Inpt,X,Clinic,X,Inpt,X,X,ER,X,X,X,X,X,CTU,X,X
+Week 11,Clinic,Inpt,X,Clinic,X,Inpt,X,CTU,X,Inpt,ER,X,X,ER,ER,X,ER,X,X,X,Inpt,X,X,X,Inpt,X,X,X,X,X,X,X,X
+Week 12,Inpt,X,X,X,X,X,X,X,Inpt,ER,Clinic,X,X,Clinic,X,Inpt,Inpt,X,Inpt,X,CTU,X,CTU,X,X,ER,X,X,X,X,X,ER,Inpt
+Week 13,X,X,X,X,X,X,X,X,X,X,Inpt,X,X,X,Inpt,ER,X,X,X,X,X,X,X,X,X,X,ER,X,X,X,X,CTU,X
+Week 14,X,Inpt,X,X,X,Inpt,X,X,X,Inpt,X,Inpt,X,Inpt,X,X,ER,ER,X,ER,X,X,X,X,ER,X,X,X,X,X,Inpt,X,X
+Week 15,Inpt,ER,X,CTU,X,Clinic,ER,X,X,Clinic,ER,X,X,ER,CTU,X,X,X,Inpt,X,X,X,X,X,X,X,X,X,X,X,X,X,X
+Week 16,ER,X,X,X,X,ER,X,X,ER,CTU,Clinic,X,Inpt,Clinic,X,X,X,X,Inpt,X,X,X,X,CTU,Inpt,X,X,ER,Inpt,X,X,X,Inpt
+Week 17,Clinic,Inpt,X,X,ER,Inpt,X,X,X,Inpt,X,Inpt,Clinic,X,ER,X,ER,X,X,X,Inpt,X,X,X,X,X,X,CTU,ER,X,X,X,Consult
+Week 18,Inpt,ER,X,X,Clinic,X,X,X,Inpt,Consult,Inpt,X,X,CTU,X,X,CTU,ER,Inpt,X,X,X,Clinic,X,ER,Inpt,X,X,X,X,X,ER,X
+Week 19,CTU,Clinic,X,X,X,X,CTU,X,ER,ER,Clinic,Inpt,X,Inpt,Inpt,X,Inpt,X,X,X,ER,X,X,Inpt,X,X,X,X,Inpt,X,X,X,ER
+Week 20,ER,Inpt,X,X,CTU,X,X,X,X,X,X,ER,X,X,Consult,X,X,X,Clinic,X,Inpt,Clinic,Inpt,ER,Inpt,X,X,Inpt,CTU,ER,X,X,Inpt
+Week 21,X,ER,X,X,X,X,X,X,X,X,CTU,Clinic,Inpt,ER,ER,X,ER,X,Inpt,X,X,CTU,X,X,Clinic,Inpt,X,Consult,X,X,X,Inpt,Inpt
+Week 22,Clinic,X,X,X,Inpt,X,X,X,,ER,Inpt,Inpt,X,,X,X,Clinic,X,X,Inpt,Inpt,,ER,CTU,CTU,Consult,X,ER,Inpt,,,ER,X
+Week 23,Inpt,Inpt,,X,ER,,X,X,,,ER,X,Consult,Inpt,CTU,X,,Inpt,,ER,Clinic,X,,,,CTU,Inpt,X,ER,,,Inpt,Clinic
+Week 24,X,X,,X,Inpt,ER,X,X,X,Inpt,X,Inpt,ER,Clinic,Inpt,X,CTU,ER,,Inpt,Consult,X,Inpt,X,X,X,X,Clinic,X,CTU,ER,X,X
+Week 25,CTU,,X,Inpt,,Inpt,ER,X,Inpt,,CTU,,Inpt,,,,,X,ER,Clinic,,X,X,,X,X,,Inpt,Consult,,Clinic,X,Inpt
+Week 26,,,Inpt,,,ER,,Inpt,ER,Clinic,,Consult,,CTU,X,,Inpt,,Inpt,Inpt,,X,,,ER,X,,X,,Inpt,CTU,Clinic,

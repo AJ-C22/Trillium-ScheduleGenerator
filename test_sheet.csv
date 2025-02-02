@@ -1,14 +1,44 @@
-,Doctor 1,Doctor 2,
-ER,5,6,
-Clinic,8,7,
-Off,5,5,
-,,,
-,Doctor 1,Doctor 2,Doctor 3
-Sept 30 - Oct 6,X,,
-Oct 7 - Oct 13,,X,
-Oct 14 - Oct 20,,,X
-,,,
-,ER,Clinic,Off
-Sept 30 - Oct 6,4,1,0
-Oct 7 - Oct 13,4,1,0
-Oct 14 - Oct 20,4,1,0
+,R Chandi,R Sharma,K Monkman,M Sergi,F Vira,M Holmes,M Barboza,T Tang,P Khanna,J Levitz,N Pirzada,S Chugh,J Beswick,G Gaisano,S Narang,E Fernando,M Robinson,John You,A Wang,M Kuhlmann,S Piran,W Mansoor,M Graiss,N Hossain,S Zarabi,N Sharfuddin,S Rodic,M Beyaert,J Zhang,S Gupta,H Mahmood,K Eshak,Erin Campos
+Week 1,,,,,X,,,X,,,,X,X,,,X,,X,X,X,,,X,,,X,X,,X,,,,X
+Week 2,,,,,X,,,X,,,,,,,X,X,X,X,X,X,,,,,,X,,X,X,,,,X
+Week 3,,,,X,X,,X,X,X,,,,X,,,X,X,X,X,,X,,X,,X,X,,X,X,X,,,X
+Week 4,,,,,X,,X,X,,,,X,,,,X,,,X,,X,,,X,X,,,X,X,X,,X,
+Week 5,,,,,X,,X,X,X,,,,,,,X,X,,,,X,X,,,,,,,X,,,X,
+Week 6,,,,,X,,X,X,,,,,,,X,,X,,,,,X,,,,X,,X,X,,,X,X
+Week 7,,,,,X,,,X,,,,X,,,,,,,X,,,X,,,,X,,,X,,,X,
+Week 8,,,X,,,,X,X,,,,,,X,,,,,,,,X,,,X,,X,,X,X,,,
+Week 9,,,,,,X,X,X,,,,,,,X,,,,,,,X,,,,X,X,,,,,,
+Week 10,,,,,,,,X,,,,,X,,,,,,,,,,,,,,X,X,,,,,
+Week 11,,,X,,,,,,,,,X,,,,,,,,,,,X,,,,X,,X,,,X,X
+Week 12,,,,,,,,,,,,,X,,,,,X,,,,,,,X,,,,X,X,,,
+Week 13,,X,X,X,X,X,X,,,X,,X,,X,,,X,X,,X,X,,,,X,,,X,,X,X,,
+Week 14,X,,,,,,,X,X,,X,,X,,X,,,,X,,,X,X,X,,,X,,X,,,X,X
+Week 15,,,,,,,,X,X,,,,,,,X,,X,,X,,X,X,,X,X,X,X,X,,,X,
+Week 16,,,,,X,,,,,,,,,,,X,,,,X,,X,X,,,X,,,,,,X,
+Week 17,,,,,,,X,,,,,,,,,X,,,,X,,X,X,,X,,,,,X,,,
+Week 18,,,,,,,X,,,,,,,,,X,,,,X,,X,,,,,,,X,,,,
+Week 19,,,X,,X,X,,,,,,,,,,X,,,,X,,X,,,X,X,,X,,,,,
+Week 20,,,X,X,,X,,,,,,,,X,,X,,,,X,,,,,,X,,,,,X,X,
+Week 21,,,X,,X,X,X,X,X,,,,,,,X,,X,,X,,,,,,,,,X,X,,,
+Week 22,,,X,,,X,X,X,,,,,,,,X,,,,,,,,,,,X,,,,,,
+Week 23,,,,,,,X,X,,,,,,,,,,,,,,X,,,,,,X,,,,,
+Week 24,X,X,,X,,,X,X,X,,X,,,,,X,,,,,,X,,X,X,X,X,,X,,,X,
+Week 25,,,X,,,,,X,,,,,,,,,,,,,,X,X,,X,X,,,,,,X,
+Week 26,,,,,,,,,,,,,,,X,,,,,,,X,,,,X,,X,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,R Chandi,R Sharma,K Monkman,M Sergi,F Vira,M Holmes,M Barboza,T Tang,P Khanna,J Levitz,N Pirzada,S Chugh,J Beswick,G Gaisano,S Narang,E Fernando,M Robinson,John You,A Wang,M Kuhlmann,S Piran,W Mansoor,M Graiss,N Hossain,S Zarabi,N Sharfuddin,S Rodic,M Beyaert,J Zhang,S Gupta,H Mahmood,K Eshak,Erin Campos
+CTU,2,0,0,2,2,0,4,2,0,2,2,0,0,2,2,0,2,0,0,0,2,2,4,2,2,2,2,2,2,2,2,2,0
+Inpt,8,10,5,3,2,7,1,2,5,5,5,6,6,5,5,2,5,6,6,6,4,4,2,3,6,4,3,3,3,3,3,3,6
+Clinic,3,3,1,1,2,2,1,0,1,2,3,1,1,3,2,1,2,1,1,2,1,1,2,1,2,1,1,1,1,1,1,1,1
+ER,6,6,2,2,2,5,2,0,4,5,4,2,2,4,5,2,5,3,2,2,2,2,2,3,4,2,2,2,2,2,3,3,2
+Consult,1,1,1,1,0,1,1,0,0,1,1,1,1,1,1,0,1,0,1,0,1,1,0,1,1,1,1,1,1,1,0,0,1
+Off,5,5,16,16,17,10,16,21,15,10,10,15,15,10,10,20,10,15,15,15,15,15,15,15,10,15,16,16,16,16,16,16,15
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Week 1,Week 2,Week 3,Week 4,Week 5,Week 6,Week 7,Week 8,Week 9,Week 10,Week 11,Week 12,Week 13,Week 14,Week 15,Week 16,Week 17,Week 18,Week 19,Week 20,Week 21,Week 22,Week 23,Week 24,Week 25,Week 26
+CTU,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+Inpt,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+Clinic,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+ER,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+Consult,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+Off,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18
+
