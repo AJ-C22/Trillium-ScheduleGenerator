@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hospital Schedule Studio</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Hospital scheduling</p>
+      <h1>Schedule Studio</h1>
+    </div>
+    <div class="top-actions">
+      <button class="button secondary" id="importButton">Import JSON</button>
+      <button class="button secondary" id="exportConfigButton">Export configuration</button>
+      <button class="button primary" id="generateButton">Generate schedule</button>
+      <input id="importFile" type="file" accept=".json" hidden>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h2>Build a feasible schedule from your department’s rules</h2>
+        <p>Configure any service lines, coverage levels, staff qualifications, availability, and fixed assignments. Hard constraints are never silently violated.</p>
+      </div>
+      <div class="status-box" id="statusBox">
+        <span class="status-dot neutral"></span>
+        <div><strong>Ready</strong><small>Configure inputs, then generate.</small></div>
+      </div>
+    </section>
+
+    <nav class="steps" aria-label="Configuration sections">
+      <button class="step active" data-target="setup">1. Setup</button>
+      <button class="step" data-target="roles">2. Services</button>
+      <button class="step" data-target="staff">3. Staff</button>
+      <button class="step" data-target="results">4. Results</button>
+    </nav>
+
+    <section id="setup" class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">Schedule definition</p><h2>Setup</h2></div>
+        <button class="button ghost" id="loadDemoButton">Load 31-doctor demo</button>
+      </div>
+      <div class="form-grid four">
+        <label>Schedule name<input id="scheduleName" value="New 26-week schedule"></label>
+        <label>Number of weeks<input id="weekCount" type="number" min="1" max="52" value="26"></label>
+        <label>Solver time limit (seconds)<input id="timeLimit" type="number" min="5" max="600" value="120"></label>
+      </div>
+      <div class="callout">
+        Coverage and availability are hard constraints. Workload distribution and spacing are optimized preferences unless you add a fixed assignment.
+      </div>
+    </section>
+
+    <section id="roles" class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">User-defined inputs</p><h2>Services and weekly coverage</h2></div>
+        <button class="button secondary" id="addRoleButton">Add service</button>
+      </div>
+      <div class="table-shell">
+        <table>
+          <thead><tr><th>Service name</th><th>Required each week</th><th></th></tr></thead>
+          <tbody id="rolesBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="staff" class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">People and constraints</p>
+          <h2>Staff</h2>
+          <p class="help">Unavailable examples: <code>1, 4, 8-10</code>. Fixed examples: <code>3:CTU, 12:Clinic</code>.</p>
+        </div>
+        <button class="button secondary" id="addStaffButton">Add staff member</button>
+      </div>
+      <div class="table-shell staff-shell">
+        <table>
+          <thead><tr><th>Name</th><th>FTE</th><th>Eligible services</th><th>Unavailable weeks</th><th>Fixed assignments</th><th></th></tr></thead>
+          <tbody id="staffBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="results" class="panel results-panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">Generated output</p><h2>Schedule</h2></div>
+        <div class="result-actions">
+          <button class="button secondary" id="downloadCsvButton" disabled>Download CSV</button>
+          <button class="button secondary" id="downloadExcelButton" disabled>Download Excel</button>
+        </div>
+      </div>
+      <div id="metrics" class="metrics"></div>
+      <div id="diagnostics"></div>
+      <div class="schedule-shell" id="scheduleShell">
+        <div class="empty-state">Generate a schedule to see the 2D assignment matrix.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Schedules require review and approval by the responsible clinical scheduler.</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

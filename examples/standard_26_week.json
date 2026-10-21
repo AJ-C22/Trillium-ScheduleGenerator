@@ -1,0 +1,1020 @@
+{
+  "name": "Standard 26-week hospital schedule",
+  "roles": [
+    "CTU",
+    "Inpatient",
+    "Clinic",
+    "ER",
+    "Consult"
+  ],
+  "periods": [
+    {
+      "id": "W01",
+      "label": "Week 01",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W02",
+      "label": "Week 02",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W03",
+      "label": "Week 03",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W04",
+      "label": "Week 04",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W05",
+      "label": "Week 05",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W06",
+      "label": "Week 06",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W07",
+      "label": "Week 07",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W08",
+      "label": "Week 08",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W09",
+      "label": "Week 09",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W10",
+      "label": "Week 10",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W11",
+      "label": "Week 11",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W12",
+      "label": "Week 12",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W13",
+      "label": "Week 13",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W14",
+      "label": "Week 14",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W15",
+      "label": "Week 15",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W16",
+      "label": "Week 16",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W17",
+      "label": "Week 17",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W18",
+      "label": "Week 18",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W19",
+      "label": "Week 19",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W20",
+      "label": "Week 20",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W21",
+      "label": "Week 21",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W22",
+      "label": "Week 22",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W23",
+      "label": "Week 23",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W24",
+      "label": "Week 24",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W25",
+      "label": "Week 25",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "W26",
+      "label": "Week 26",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1
+      }
+    }
+  ],
+  "staff": [
+    {
+      "id": "doctor-01",
+      "name": "Doctor 01",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W01",
+        "W09"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "OFF": 11
+      }
+    },
+    {
+      "id": "doctor-02",
+      "name": "Doctor 02",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W04",
+        "W12"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "OFF": 12
+      }
+    },
+    {
+      "id": "doctor-03",
+      "name": "Doctor 03",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W07",
+        "W15"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "OFF": 12
+      }
+    },
+    {
+      "id": "doctor-04",
+      "name": "Doctor 04",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W10",
+        "W18"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "OFF": 12
+      }
+    },
+    {
+      "id": "doctor-05",
+      "name": "Doctor 05",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W13",
+        "W21"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "OFF": 12
+      }
+    },
+    {
+      "id": "doctor-06",
+      "name": "Doctor 06",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W16",
+        "W24"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "OFF": 12
+      }
+    },
+    {
+      "id": "doctor-07",
+      "name": "Doctor 07",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W19",
+        "W01"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "OFF": 12
+      }
+    },
+    {
+      "id": "doctor-08",
+      "name": "Doctor 08",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W22",
+        "W04"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "OFF": 12
+      }
+    },
+    {
+      "id": "doctor-09",
+      "name": "Doctor 09",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W25",
+        "W07"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "OFF": 12
+      }
+    },
+    {
+      "id": "doctor-10",
+      "name": "Doctor 10",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W02",
+        "W10"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "OFF": 12
+      }
+    },
+    {
+      "id": "doctor-11",
+      "name": "Doctor 11",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W05",
+        "W13"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "OFF": 12
+      }
+    },
+    {
+      "id": "doctor-12",
+      "name": "Doctor 12",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W08",
+        "W16"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 13
+      }
+    },
+    {
+      "id": "doctor-13",
+      "name": "Doctor 13",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W11",
+        "W19"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 13
+      }
+    },
+    {
+      "id": "doctor-14",
+      "name": "Doctor 14",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W14",
+        "W22"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 13
+      }
+    },
+    {
+      "id": "doctor-15",
+      "name": "Doctor 15",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W17",
+        "W25"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 13
+      }
+    },
+    {
+      "id": "doctor-16",
+      "name": "Doctor 16",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W20",
+        "W02"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 13
+      }
+    },
+    {
+      "id": "doctor-17",
+      "name": "Doctor 17",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W23",
+        "W05"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 13
+      }
+    },
+    {
+      "id": "doctor-18",
+      "name": "Doctor 18",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W26",
+        "W08"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 13
+      }
+    },
+    {
+      "id": "doctor-19",
+      "name": "Doctor 19",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W03",
+        "W11"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 13
+      }
+    },
+    {
+      "id": "doctor-20",
+      "name": "Doctor 20",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W06",
+        "W14"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 13
+      }
+    },
+    {
+      "id": "doctor-21",
+      "name": "Doctor 21",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W09",
+        "W17"
+      ],
+      "workload_targets": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 13
+      }
+    },
+    {
+      "id": "doctor-22",
+      "name": "Doctor 22",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W12",
+        "W20"
+      ],
+      "workload_targets": {
+        "CTU": 1,
+        "Inpatient": 5,
+        "Clinic": 1,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 15
+      }
+    },
+    {
+      "id": "doctor-23",
+      "name": "Doctor 23",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W15",
+        "W23"
+      ],
+      "workload_targets": {
+        "CTU": 1,
+        "Inpatient": 5,
+        "Clinic": 1,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 15
+      }
+    },
+    {
+      "id": "doctor-24",
+      "name": "Doctor 24",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W18",
+        "W26"
+      ],
+      "workload_targets": {
+        "CTU": 1,
+        "Inpatient": 5,
+        "Clinic": 1,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 15
+      }
+    },
+    {
+      "id": "doctor-25",
+      "name": "Doctor 25",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W21",
+        "W03"
+      ],
+      "workload_targets": {
+        "CTU": 1,
+        "Inpatient": 5,
+        "Clinic": 1,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 15
+      }
+    },
+    {
+      "id": "doctor-26",
+      "name": "Doctor 26",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W24",
+        "W06"
+      ],
+      "workload_targets": {
+        "CTU": 1,
+        "Inpatient": 5,
+        "Clinic": 1,
+        "ER": 3,
+        "Consult": 1,
+        "OFF": 15
+      }
+    },
+    {
+      "id": "doctor-27",
+      "name": "Doctor 27",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W01",
+        "W09"
+      ],
+      "workload_targets": {
+        "CTU": 1,
+        "Inpatient": 5,
+        "Clinic": 1,
+        "ER": 3,
+        "Consult": 0,
+        "OFF": 16
+      }
+    },
+    {
+      "id": "doctor-28",
+      "name": "Doctor 28",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W04",
+        "W12"
+      ],
+      "workload_targets": {
+        "CTU": 1,
+        "Inpatient": 5,
+        "Clinic": 1,
+        "ER": 3,
+        "Consult": 0,
+        "OFF": 16
+      }
+    },
+    {
+      "id": "doctor-29",
+      "name": "Doctor 29",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W07",
+        "W15"
+      ],
+      "workload_targets": {
+        "CTU": 1,
+        "Inpatient": 5,
+        "Clinic": 1,
+        "ER": 3,
+        "Consult": 0,
+        "OFF": 16
+      }
+    },
+    {
+      "id": "doctor-30",
+      "name": "Doctor 30",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W10",
+        "W18"
+      ],
+      "workload_targets": {
+        "CTU": 1,
+        "Inpatient": 5,
+        "Clinic": 1,
+        "ER": 3,
+        "Consult": 0,
+        "OFF": 16
+      }
+    },
+    {
+      "id": "doctor-31",
+      "name": "Doctor 31",
+      "eligible_roles": [
+        "CTU",
+        "Inpatient",
+        "Clinic",
+        "ER",
+        "Consult"
+      ],
+      "unavailable": [
+        "W13",
+        "W21"
+      ],
+      "workload_targets": {
+        "CTU": 1,
+        "Inpatient": 5,
+        "Clinic": 1,
+        "ER": 3,
+        "Consult": 0,
+        "OFF": 16
+      }
+    }
+  ],
+  "rules": {
+    "consecutive_assignment_weight": 4,
+    "consecutive_off_weight": 6,
+    "long_run_weight": 12,
+    "time_limit_seconds": 120,
+    "random_seed": 1
+  }
+}

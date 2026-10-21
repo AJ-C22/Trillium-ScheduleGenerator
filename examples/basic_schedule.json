@@ -1,0 +1,98 @@
+{
+  "name": "Example hospitalist schedule",
+  "roles": ["CTU", "Inpatient", "Clinic", "ER", "Consult"],
+  "periods": [
+    {
+      "id": "week-1",
+      "label": "Week 1",
+      "requirements": {
+        "CTU": 1,
+        "Inpatient": 1,
+        "Clinic": 1,
+        "ER": 1,
+        "Consult": 1
+      }
+    },
+    {
+      "id": "week-2",
+      "label": "Week 2",
+      "requirements": {
+        "CTU": 1,
+        "Inpatient": 1,
+        "Clinic": 1,
+        "ER": 1,
+        "Consult": 1
+      }
+    }
+  ],
+  "staff": [
+    {
+      "id": "doctor-1",
+      "name": "Doctor 1",
+      "eligible_roles": ["CTU", "Inpatient"],
+      "workload_targets": {
+        "CTU": {"min": 1, "max": 1, "preferred": 1},
+        "Inpatient": {"min": 1, "max": 1, "preferred": 1}
+      }
+    },
+    {
+      "id": "doctor-2",
+      "name": "Doctor 2",
+      "eligible_roles": ["CTU", "Inpatient"],
+      "fixed_assignments": {"week-1": "Inpatient"},
+      "workload_targets": {
+        "CTU": {"min": 1, "max": 1, "preferred": 1},
+        "Inpatient": {"min": 1, "max": 1, "preferred": 1}
+      }
+    },
+    {
+      "id": "doctor-3",
+      "name": "Doctor 3",
+      "eligible_roles": ["Clinic", "ER"],
+      "workload_targets": {
+        "Clinic": {"min": 1, "max": 1, "preferred": 1},
+        "ER": {"min": 1, "max": 1, "preferred": 1}
+      }
+    },
+    {
+      "id": "doctor-4",
+      "name": "Doctor 4",
+      "eligible_roles": ["Clinic", "ER"],
+      "workload_targets": {
+        "Clinic": {"min": 1, "max": 1, "preferred": 1},
+        "ER": {"min": 1, "max": 1, "preferred": 1}
+      }
+    },
+    {
+      "id": "doctor-5",
+      "name": "Doctor 5",
+      "eligible_roles": ["Consult"],
+      "workload_targets": {"Consult": 2}
+    },
+    {
+      "id": "doctor-6",
+      "name": "Doctor 6",
+      "eligible_roles": ["Consult"],
+      "unavailable": ["week-1"],
+      "preferences": [
+        {
+          "period": "week-2",
+          "role": "Consult",
+          "kind": "prefer",
+          "weight": 5
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "default_max_consecutive": {
+      "CTU": 1,
+      "Inpatient": 1,
+      "Clinic": 1,
+      "ER": 1
+    },
+    "consecutive_assignment_weight": 2,
+    "time_limit_seconds": 30,
+    "random_seed": 1
+  }
+}

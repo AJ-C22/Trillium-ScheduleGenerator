@@ -1,0 +1,59 @@
+{
+  "name": "Preference and spacing test",
+  "roles": ["ER", "Ward", "Clinic"],
+  "periods": [
+    {"id": "W1", "label": "Week 1", "requirements": {"ER": 1, "Ward": 1, "Clinic": 1}},
+    {"id": "W2", "label": "Week 2", "requirements": {"ER": 1, "Ward": 1, "Clinic": 1}},
+    {"id": "W3", "label": "Week 3", "requirements": {"ER": 1, "Ward": 1, "Clinic": 1}},
+    {"id": "W4", "label": "Week 4", "requirements": {"ER": 1, "Ward": 1, "Clinic": 1}},
+    {"id": "W5", "label": "Week 5", "requirements": {"ER": 1, "Ward": 1, "Clinic": 1}},
+    {"id": "W6", "label": "Week 6", "requirements": {"ER": 1, "Ward": 1, "Clinic": 1}}
+  ],
+  "staff": [
+    {
+      "id": "doctor-a",
+      "name": "Doctor A",
+      "eligible_roles": ["ER", "Ward", "Clinic"],
+      "unavailable": ["W1"],
+      "workload_targets": {"ER": 2, "Ward": 1, "Clinic": 1, "OFF": 2}
+    },
+    {
+      "id": "doctor-b",
+      "name": "Doctor B",
+      "eligible_roles": ["ER", "Ward", "Clinic"],
+      "fixed_assignments": {"W1": "ER"},
+      "workload_targets": {"ER": 1, "Ward": 2, "Clinic": 1, "OFF": 2}
+    },
+    {
+      "id": "doctor-c",
+      "name": "Doctor C",
+      "eligible_roles": ["ER", "Ward", "Clinic"],
+      "workload_targets": {"ER": 1, "Ward": 1, "Clinic": 2, "OFF": 2},
+      "preferences": [
+        {"period": "W2", "role": "Clinic", "kind": "avoid", "weight": 8}
+      ]
+    },
+    {
+      "id": "doctor-d",
+      "name": "Doctor D",
+      "eligible_roles": ["ER", "Ward", "Clinic"],
+      "workload_targets": {"ER": 1, "Ward": 1, "Clinic": 1, "OFF": 3},
+      "preferences": [
+        {"period": "W4", "role": "Ward", "kind": "prefer", "weight": 8}
+      ]
+    },
+    {
+      "id": "doctor-e",
+      "name": "Doctor E",
+      "eligible_roles": ["ER", "Ward", "Clinic"],
+      "workload_targets": {"ER": 1, "Ward": 1, "Clinic": 1, "OFF": 3}
+    }
+  ],
+  "rules": {
+    "consecutive_assignment_weight": 4,
+    "consecutive_off_weight": 6,
+    "long_run_weight": 10,
+    "time_limit_seconds": 30,
+    "random_seed": 1
+  }
+}

@@ -1,0 +1,2613 @@
+{
+  "name": "2026B Trillium benchmark",
+  "roles": [
+    "CTU",
+    "Inpatient",
+    "Clinic",
+    "ER",
+    "Consult",
+    "Holiday Coverage"
+  ],
+  "role_groups": {},
+  "periods": [
+    {
+      "id": "W01",
+      "label": "Sept 28 - Oct 4",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W02",
+      "label": "Oct 5 - 11***",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W03",
+      "label": "Oct 12 - 18",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W04",
+      "label": "Oct 19 - 25 (CSIM21-23)",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 7,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W05",
+      "label": "Oct 26 - Nov 1",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W06",
+      "label": "Nov 2 - 8",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W07",
+      "label": "Nov 9 - 15",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W08",
+      "label": "Nov 16 - 22",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 7,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W09",
+      "label": "Nov 23 - 29",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 7,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W10",
+      "label": "Nov 30 - Dec 6",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W11",
+      "label": "Dec 7 - 13",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W12",
+      "label": "Dec 14 - 20",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W13",
+      "label": "Dec 21 - 27 (Christmas)",
+      "requirements": {
+        "CTU": 0,
+        "Inpatient": 0,
+        "Clinic": 0,
+        "ER": 0,
+        "Consult": 0,
+        "Holiday Coverage": 12
+      }
+    },
+    {
+      "id": "W14",
+      "label": "Dec 28 - Jan 3 (NewYrs)",
+      "requirements": {
+        "CTU": 0,
+        "Inpatient": 0,
+        "Clinic": 0,
+        "ER": 0,
+        "Consult": 0,
+        "Holiday Coverage": 16
+      }
+    },
+    {
+      "id": "W15",
+      "label": "Jan 4 - 10",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W16",
+      "label": "Jan 11 - 17",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W17",
+      "label": "Jan 18 - 24",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 7,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W18",
+      "label": "Jan 25 - 31",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 7,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W19",
+      "label": "Feb 1 - 7",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W20",
+      "label": "Feb 8 - 14***",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 5,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W21",
+      "label": "Feb 15 - 21",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W22",
+      "label": "Feb 22 - 28",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W23",
+      "label": "Mar 1 - 7",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 7,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W24",
+      "label": "Mar 8 - 14",
+      "requirements": {
+        "CTU": 2,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W25",
+      "label": "Mar 15 - 21",
+      "requirements": {
+        "CTU": 1,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    },
+    {
+      "id": "W26",
+      "label": "Mar 22 - 28***",
+      "requirements": {
+        "CTU": 1,
+        "Inpatient": 6,
+        "Clinic": 2,
+        "ER": 4,
+        "Consult": 1,
+        "Holiday Coverage": 0
+      }
+    }
+  ],
+  "staff": [
+    {
+      "id": "r-chandi",
+      "name": "R Chandi",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W03",
+        "W14",
+        "W21"
+      ],
+      "fixed_assignments": {
+        "W12": "Inpatient",
+        "W13": "Holiday Coverage",
+        "W26": "Inpatient"
+      },
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 6,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 6,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 5,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "r-sharma",
+      "name": "R Sharma",
+      "eligible_roles": [
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W04",
+        "W13",
+        "W20",
+        "W25"
+      ],
+      "fixed_assignments": {
+        "W01": "Inpatient",
+        "W14": "Holiday Coverage",
+        "W24": "ER",
+        "W26": "Inpatient"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 10,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 6,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 5,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "k-monkman",
+      "name": "K Monkman",
+      "eligible_roles": [
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W11",
+        "W13",
+        "W18",
+        "W19",
+        "W20",
+        "W25"
+      ],
+      "fixed_assignments": {
+        "W14": "Holiday Coverage",
+        "W15": "Inpatient"
+      },
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 5,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 16,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "m-holmes",
+      "name": "M Holmes",
+      "eligible_roles": [
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W13",
+        "W22",
+        "W25"
+      ],
+      "fixed_assignments": {
+        "W14": "Holiday Coverage"
+      },
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 8,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 10,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "m-barboza",
+      "name": "M Barboza",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W03",
+        "W04",
+        "W06",
+        "W07",
+        "W13",
+        "W18",
+        "W19",
+        "W23",
+        "W25"
+      ],
+      "fixed_assignments": {
+        "W14": "Holiday Coverage"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 6,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 15,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "t-tang",
+      "name": "T Tang",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06",
+        "W09",
+        "W10",
+        "W11",
+        "W12",
+        "W13",
+        "W15",
+        "W16",
+        "W17",
+        "W18",
+        "W19",
+        "W22",
+        "W23",
+        "W24",
+        "W25",
+        "W26"
+      ],
+      "fixed_assignments": {
+        "W07": "CTU",
+        "W08": "CTU",
+        "W14": "Holiday Coverage",
+        "W20": "Inpatient",
+        "W21": "Inpatient"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 21,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "p-khanna",
+      "name": "P Khanna",
+      "eligible_roles": [
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W03",
+        "W04",
+        "W05",
+        "W12",
+        "W13",
+        "W15",
+        "W21"
+      ],
+      "fixed_assignments": {
+        "W14": "Holiday Coverage",
+        "W26": "Inpatient"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 5,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 15,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "j-levitz",
+      "name": "J Levitz",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W14",
+        "W18"
+      ],
+      "fixed_assignments": {
+        "W13": "Holiday Coverage"
+      },
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 6,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 10,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "n-pirzada",
+      "name": "N Pirzada",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W04",
+        "W14"
+      ],
+      "fixed_assignments": {
+        "W13": "Holiday Coverage"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 10,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "s-chugh",
+      "name": "S Chugh",
+      "eligible_roles": [
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W02",
+        "W05",
+        "W12",
+        "W13",
+        "W15",
+        "W25",
+        "W26"
+      ],
+      "fixed_assignments": {
+        "W04": "Inpatient",
+        "W06": "ER",
+        "W07": "ER",
+        "W14": "Holiday Coverage"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 7,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 13,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "g-gaisano",
+      "name": "G Gaisano",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W04",
+        "W08",
+        "W14",
+        "W19"
+      ],
+      "fixed_assignments": {
+        "W13": "Holiday Coverage"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 6,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 5,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 7,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "s-narang",
+      "name": "S Narang",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W04",
+        "W06",
+        "W14"
+      ],
+      "fixed_assignments": {
+        "W13": "Holiday Coverage"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 6,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 10,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "e-fernando",
+      "name": "E Fernando",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W08",
+        "W09",
+        "W10",
+        "W11",
+        "W12",
+        "W13",
+        "W14",
+        "W15",
+        "W16",
+        "W17",
+        "W18",
+        "W23",
+        "W24",
+        "W25",
+        "W26"
+      ],
+      "fixed_assignments": {},
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 6,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 17,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "m-robinson",
+      "name": "M Robinson",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W12",
+        "W13",
+        "W26"
+      ],
+      "fixed_assignments": {
+        "W01": "Inpatient",
+        "W14": "Holiday Coverage",
+        "W15": "Inpatient"
+      },
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 6,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 5,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 8,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "john-you",
+      "name": "John You",
+      "eligible_roles": [
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W04",
+        "W07",
+        "W08",
+        "W13",
+        "W15",
+        "W21"
+      ],
+      "fixed_assignments": {
+        "W14": "Holiday Coverage"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 6,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 14,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "b-wang",
+      "name": "B Wang",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W13",
+        "W16",
+        "W18"
+      ],
+      "fixed_assignments": {
+        "W14": "Holiday Coverage"
+      },
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ],
+        "W07": [
+          "OFF"
+        ],
+        "W12": [
+          "OFF"
+        ],
+        "W15": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 15,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "m-kuhlmann",
+      "name": "M Kuhlmann",
+      "eligible_roles": [
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W02",
+        "W13",
+        "W15",
+        "W16",
+        "W17",
+        "W18",
+        "W20",
+        "W21",
+        "W22",
+        "W25"
+      ],
+      "fixed_assignments": {
+        "W14": "Holiday Coverage"
+      },
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 6,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 15,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "s-piran",
+      "name": "S Piran",
+      "eligible_roles": [
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W04",
+        "W06",
+        "W13",
+        "W18"
+      ],
+      "fixed_assignments": {
+        "W14": "Holiday Coverage",
+        "W15": "Inpatient",
+        "W25": "Inpatient",
+        "W26": "Inpatient"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 7,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 11,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "w-mansoor",
+      "name": "W Mansoor",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W02",
+        "W03",
+        "W06",
+        "W07",
+        "W08",
+        "W09",
+        "W14",
+        "W15",
+        "W16",
+        "W17",
+        "W18",
+        "W23",
+        "W24",
+        "W25",
+        "W26"
+      ],
+      "fixed_assignments": {
+        "W04": "ER",
+        "W12": "Clinic",
+        "W13": "Holiday Coverage"
+      },
+      "forbidden_assignments": {
+        "W05": [
+          "OFF"
+        ],
+        "W10": [
+          "OFF"
+        ],
+        "W11": [
+          "OFF"
+        ],
+        "W20": [
+          "OFF"
+        ],
+        "W21": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 16,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "m-graiss",
+      "name": "M Graiss",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W03",
+        "W04",
+        "W06",
+        "W08",
+        "W14",
+        "W15",
+        "W18",
+        "W19",
+        "W20",
+        "W21",
+        "W22",
+        "W23",
+        "W24",
+        "W25",
+        "W26"
+      ],
+      "fixed_assignments": {
+        "W01": "Inpatient",
+        "W09": "CTU",
+        "W10": "CTU",
+        "W12": "Inpatient",
+        "W13": "Holiday Coverage"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 19,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "n-hossain",
+      "name": "N Hossain",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W03",
+        "W10",
+        "W11",
+        "W12",
+        "W13",
+        "W14",
+        "W15",
+        "W16",
+        "W17",
+        "W18",
+        "W19",
+        "W20",
+        "W21",
+        "W22",
+        "W23",
+        "W24",
+        "W25",
+        "W26"
+      ],
+      "fixed_assignments": {},
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 22,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "s-zarabi",
+      "name": "S Zarabi",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W03",
+        "W06",
+        "W10",
+        "W12",
+        "W13",
+        "W18",
+        "W20",
+        "W22",
+        "W24",
+        "W25"
+      ],
+      "fixed_assignments": {
+        "W07": "CTU",
+        "W08": "CTU",
+        "W14": "Holiday Coverage",
+        "W15": "CTU",
+        "W16": "CTU"
+      },
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 10,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "n-sharfuddin",
+      "name": "N Sharfuddin",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W02",
+        "W04",
+        "W05",
+        "W06",
+        "W07",
+        "W09",
+        "W11",
+        "W12",
+        "W13",
+        "W17",
+        "W20",
+        "W21",
+        "W22",
+        "W24",
+        "W25"
+      ],
+      "fixed_assignments": {
+        "W01": "Inpatient",
+        "W14": "Holiday Coverage",
+        "W15": "CTU",
+        "W16": "CTU"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 15,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "s-rodic",
+      "name": "S Rodic",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W02",
+        "W11",
+        "W14",
+        "W15",
+        "W18",
+        "W25",
+        "W26"
+      ],
+      "fixed_assignments": {
+        "W12": "Inpatient",
+        "W13": "Holiday Coverage"
+      },
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 16,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "j-zhang",
+      "name": "J Zhang",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W02",
+        "W03",
+        "W06",
+        "W10",
+        "W14",
+        "W15",
+        "W19",
+        "W23",
+        "W26"
+      ],
+      "fixed_assignments": {
+        "W04": "ER",
+        "W13": "Holiday Coverage"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 14,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "s-gupta",
+      "name": "S Gupta",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W03",
+        "W04",
+        "W07",
+        "W10",
+        "W13",
+        "W16",
+        "W17",
+        "W18",
+        "W23"
+      ],
+      "fixed_assignments": {
+        "W14": "Holiday Coverage",
+        "W15": "Inpatient"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 16,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "h-mahmood",
+      "name": "H Mahmood",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W02",
+        "W05",
+        "W10",
+        "W11",
+        "W13"
+      ],
+      "fixed_assignments": {
+        "W04": "ER",
+        "W14": "Holiday Coverage",
+        "W26": "Inpatient"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 5,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 11,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "y-gulzar",
+      "name": "Y Gulzar",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W14",
+        "W24"
+      ],
+      "fixed_assignments": {
+        "W13": "Holiday Coverage",
+        "W23": "Inpatient"
+      },
+      "forbidden_assignments": {
+        "W04": [
+          "OFF"
+        ]
+      },
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 5,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 12,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "j-beswick",
+      "name": "J Beswick",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06",
+        "W07",
+        "W08",
+        "W09",
+        "W10",
+        "W11",
+        "W12",
+        "W13",
+        "W14",
+        "W15",
+        "W16",
+        "W26"
+      ],
+      "fixed_assignments": {},
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 2,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 21,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "gim-1",
+      "name": "GIM 1",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W14"
+      ],
+      "fixed_assignments": {
+        "W12": "Inpatient",
+        "W13": "Holiday Coverage"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 5,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 3,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 16,
+          "weight": 4
+        }
+      }
+    },
+    {
+      "id": "gim-2",
+      "name": "GIM 2",
+      "eligible_roles": [
+        "CTU",
+        "Clinic",
+        "Consult",
+        "ER",
+        "Holiday Coverage",
+        "Inpatient"
+      ],
+      "unavailable": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W14"
+      ],
+      "fixed_assignments": {
+        "W13": "Holiday Coverage"
+      },
+      "forbidden_assignments": {},
+      "workload_targets": {
+        "CTU": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Inpatient": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Clinic": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "ER": {
+          "min": 0,
+          "max": 26,
+          "preferred": 4,
+          "weight": 10
+        },
+        "Consult": {
+          "min": 0,
+          "max": 26,
+          "preferred": 0,
+          "weight": 10
+        },
+        "Holiday Coverage": {
+          "min": 0,
+          "max": 26,
+          "preferred": 1,
+          "weight": 10
+        },
+        "OFF": {
+          "min": 0,
+          "max": 26,
+          "preferred": 16,
+          "weight": 4
+        }
+      }
+    }
+  ],
+  "rules": {
+    "default_max_consecutive": {},
+    "consecutive_assignment_weight": 3,
+    "consecutive_role_weights": {
+      "CTU": 0
+    },
+    "consecutive_off_weight": 5,
+    "long_run_weight": 8,
+    "time_limit_seconds": 120,
+    "random_seed": 1
+  }
+}

@@ -1,128 +1,135 @@
-# Trillium Hospital Schedule Generator
+# Hospital Schedule Solver V1
 
-A smart schedule generator for hospital staff that respects doctor preferences, workload requirements, and automatically optimizes for quality-of-life factors like avoiding consecutive shifts and distributing off weeks evenly.
+V1 is a feasibility-first scheduling engine. It uses Google OR-Tools CP-SAT
+instead of randomized assignment.
 
-## Features
+The engine will only return a schedule when every hard constraint is satisfied:
 
-- ✅ **Constraint-based scheduling** - Respects all hard constraints from `test_sheet.csv`
-- ✅ **Pre-marked off weeks** - Honors specific requested off weeks for each doctor
-- ✅ **Smart optimization** - Minimizes consecutive same shifts (e.g., ER-ER-ER)
-- ✅ **Even distribution** - Spreads off weeks throughout the schedule period
-- ✅ **No blanks** - Ensures every slot is filled with a valid assignment
-- ✅ **Comprehensive validation** - Built-in checking to verify schedule compliance
+- exact coverage for every role and period
+- one assignment or `OFF` per staff member and period
+- availability
+- role eligibility
+- fixed assignments
+- workload minimums and maximums
+- configurable consecutive-assignment limits
 
-## Input File: `test_sheet.csv`
+Preferences, preferred workloads, and adjacent same-role assignments are
+optimized only after those hard constraints are satisfied.
 
-The input file contains three tables separated by blank rows:
-
-### Table 1: Pre-marked Off Weeks
-- Rows: Week 1 through Week 26
-- Columns: Doctor names
-- Values: `X` marks pre-requested off weeks for each doctor
-
-### Table 2: Required Shifts per Doctor
-- Rows: Shift types (CTU, Inpt, Clinic, ER, Consult, Off)
-- Columns: Doctor names
-- Values: Number of each shift type required for each doctor over 26 weeks
-
-### Table 3: Required Shifts per Week
-- Rows: Shift types (CTU, Inpt, Clinic, ER, Consult, Off)
-- Columns: Week 1 through Week 26
-- Values: Number of each shift type needed each week
-
-## Usage
-
-### Generate a New Schedule
+## Install
 
 ```bash
-python3 main.py
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
 ```
 
-This will:
-1. Read constraints from `test_sheet.csv`
-2. Generate an optimized schedule using 50 randomized attempts
-3. Select the best schedule based on quality metrics
-4. Save the result to `schedule.csv`
-5. Display verification statistics
-6. Run comprehensive compliance checks
-
-### Check an Existing Schedule
-
-To validate an existing `schedule.csv` without regenerating it:
+## Run
 
 ```bash
-python3 check_schedule.py
+python -m scheduler examples/basic_schedule.json
 ```
 
-This performs a comprehensive compliance check including:
-- ✓ Pre-marked off weeks are respected
-- ✓ No blank cells in the schedule
-- ⚠ Doctor shift requirements (minor deviations noted)
-- ⚠ Weekly shift requirements (minor deviations noted)
-- ⚠ Consecutive shift patterns (3+ same shifts flagged)
-- ⚠ Off week distribution (clusters flagged)
-
-## Output File: `schedule.csv`
-
-A CSV file with:
-- Rows: Week 1 through Week 26
-- Columns: Doctor names
-- Values: Assigned shift type (CTU, Inpt, Clinic, ER, Consult) or `X` for off weeks
-
-## Algorithm Details
-
-### Multi-Attempt Optimization
-The generator runs 50 independent attempts with randomized doctor ordering and selects the schedule with the best overall score.
-
-### Scoring System
-Each assignment is scored based on:
-- **Consecutive shifts penalty** (-8 points per consecutive same shift)
-- **Consecutive off weeks penalty** (-5 points per consecutive off week)
-- **Diversity bonus** (+3 points for alternating shift types)
-- **Availability reward** (prioritizes doctors with quota remaining)
-- **Scarcity bonus** (prioritizes hard-to-fill shifts)
-- **Temporal distribution** (ensures even spread of off weeks)
-
-### Constraint Satisfaction
-The algorithm prioritizes:
-1. **Critical**: Pre-marked off weeks (always respected)
-2. **Critical**: No blank cells (always filled)
-3. **High**: Doctor shift quotas (best effort, minor ±1-2 deviations acceptable)
-4. **High**: Weekly shift requirements (best effort with minor deviations)
-5. **Medium**: Minimize consecutive same shifts
-6. **Medium**: Distribute off weeks evenly
-
-## Notes
-
-- **Minor deviations** from doctor/weekly requirements (±1-2 shifts) are often mathematically unavoidable when constraints conflict
-- The schedule prioritizes filling all slots over perfect quota matching
-- Pre-marked off weeks are always respected (critical constraint)
-- Consecutive shift patterns are minimized but not completely eliminated in exchange for meeting coverage requirements
-
-## Files
-
-- `main.py` - Main schedule generator with built-in validation
-- `check_schedule.py` - Standalone validation script
-- `test_sheet.csv` - Input constraints file
-- `schedule.csv` - Generated schedule output
-- `README.md` - This documentation
-
-## Requirements
+## Web application
 
 ```bash
-pip install pandas
+source .venv/bin/activate
+uvicorn web.app:app --reload
 ```
 
-## Example Output
+Open `http://127.0.0.1:8000`.
 
-```
-Schedule generated successfully!
-Total blanks remaining: 0
+The web application supports configurable service lines and weekly coverage,
+staff/FTE weighting, role eligibility, unavailable weeks, fixed assignments,
+feasibility diagnostics, a 2D schedule matrix, local configuration
+save/import, and CSV or formatted Excel export.
 
-================================================================================
-COMPLIANCE SUMMARY
-================================================================================
-✓ ACCEPTABLE: Schedule has no critical issues
-  ⚠ 79 minor warnings (often unavoidable with conflicting constraints)
-================================================================================
+Realistic scale test:
+
+```bash
+python -m scheduler examples/standard_26_week.json \
+  --output output/standard-26-week.csv \
+  --report output/standard-26-week-report.json
 ```
+
+This fixture contains 31 doctors, 26 weeks, and 15 required assignments per
+week, matching the core scale of the reviewed workbooks.
+
+Real 2026B workbook benchmark:
+
+```bash
+python tools/benchmark_2026b.py
+```
+
+This imports the current 2026B template and completed draft, solves all 26
+weeks for the 31 core doctors, and writes:
+
+- `examples/2026b_imported.json` — normalized machine-readable constraints
+- `output/2026b-schedule.csv` — generated 2D schedule
+- `output/2026b-report.json` — solver validation and workload totals
+- `output/2026b-comparison.json` — comparison with the completed draft
+
+The benchmark normalizes assignments to CTU, Inpatient, Clinic, ER, Consult,
+Holiday Coverage, and OFF. Detailed service lines cannot yet be reconstructed
+reliably because several completed workbook cells retain generic or request
+labels instead of a specific line. External/locum coverage is reported
+separately.
+
+Outputs:
+
+- `output/schedule.csv` — 2D matrix with staff names down the left, periods
+  across the top, and assignments in the cells
+- `output/report.json` — status, diagnostics, validation, and workloads
+
+An infeasible request exits with status 2 and does not write a partial schedule.
+
+## JSON input
+
+The top-level fields are:
+
+- `roles`: configurable role IDs
+- `periods`: IDs, labels, and exact role requirements
+- `staff`: eligibility, unavailable periods, fixed assignments, workload
+  targets, preferences, and consecutive limits
+- `rules`: organization-wide optimization and consecutive limits
+
+See `examples/basic_schedule.json` for the complete V1 format.
+
+Workload targets accept either an exact integer:
+
+```json
+{"CTU": 2}
+```
+
+or bounds with a soft preferred value:
+
+```json
+{"CTU": {"min": 1, "max": 3, "preferred": 2, "weight": 10}}
+```
+
+Preferences use `prefer` or `avoid`:
+
+```json
+{
+  "period": "week-4",
+  "role": "Clinic",
+  "kind": "prefer",
+  "weight": 5
+}
+```
+
+Schedule-quality weights are configurable under `rules`:
+
+- `consecutive_assignment_weight` penalizes the same working role in adjacent periods
+- `consecutive_off_weight` spreads solver-selected off periods
+- `long_run_weight` adds an extra penalty for runs of three identical assignments
+
+Runs of preset unavailable periods remain hard constraints and are not penalized.
+See `examples/preference_spacing.json` for an inspectable example.
+
+## Current boundary
+
+V1 solves the canonical model and the repository's legacy CSV fixture. Direct
+Excel import and the full holiday/weekend semantics from the 2026 workbooks
+are intentionally kept out of the solver core; they should be added as an
+import/normalization layer once those ambiguous rules are confirmed.
