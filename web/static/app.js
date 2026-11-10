@@ -8,27 +8,39 @@ const state = {
 const $ = (id) => document.getElementById(id);
 const slug = (value) => value.trim().replace(/\s+/g, " ").replace(/[^a-zA-Z0-9 _-]/g, "");
 
+const DEMO_VERSION = 2;
+
 function defaultRoles() {
   return [
-    { name: "CTU", coverage: 2 },
-    { name: "Inpatient", coverage: 6 },
-    { name: "Clinic", coverage: 2 },
-    { name: "ER", coverage: 4 },
+    { name: "CTU", coverage: 1 },
+    { name: "Inpatient", coverage: 3 },
+    { name: "Clinic", coverage: 1 },
+    { name: "ER", coverage: 2 },
     { name: "Consult", coverage: 1 },
   ];
 }
 
 function loadDemo() {
+  // Small, always-feasible starter: 12 doctors, 8 weeks, 8 working slots/week.
   state.roles = defaultRoles();
-  state.staff = Array.from({ length: 31 }, (_, index) => ({
-    name: `Doctor ${String(index + 1).padStart(2, "0")}`,
-    fte: index < 2 ? 1 : index < 10 ? 0.75 : 0.5,
-    eligible: defaultRoles().map((role) => role.name),
-    unavailable: `${((index * 3) % 26) + 1}, ${((index * 3 + 8) % 26) + 1}`,
-    fixed: "",
-  }));
-  $("scheduleName").value = "26-week hospital schedule";
-  $("weekCount").value = 26;
+  const allRoles = defaultRoles().map((role) => role.name);
+  state.staff = [
+    { name: "R Chandi", fte: 1, eligible: allRoles, unavailable: "2", fixed: "1:CTU" },
+    { name: "R Sharma", fte: 1, eligible: allRoles, unavailable: "5", fixed: "" },
+    { name: "M Holmes", fte: 0.75, eligible: ["CTU", "Inpatient", "Clinic", "Consult"], unavailable: "3", fixed: "" },
+    { name: "J Levitz", fte: 0.75, eligible: ["CTU", "Inpatient", "ER", "Consult"], unavailable: "", fixed: "" },
+    { name: "N Pirzada", fte: 0.75, eligible: allRoles, unavailable: "8", fixed: "" },
+    { name: "S Narang", fte: 0.75, eligible: allRoles, unavailable: "", fixed: "4:Clinic" },
+    { name: "M Robinson", fte: 0.75, eligible: ["Inpatient", "Clinic", "ER", "Consult"], unavailable: "1", fixed: "" },
+    { name: "B Wang", fte: 0.5, eligible: ["Inpatient", "Clinic", "ER"], unavailable: "6", fixed: "" },
+    { name: "S Zarabi", fte: 0.75, eligible: allRoles, unavailable: "", fixed: "" },
+    { name: "S Rodic", fte: 0.5, eligible: ["Inpatient", "ER", "Consult"], unavailable: "4", fixed: "" },
+    { name: "H Mahmood", fte: 0.5, eligible: ["Inpatient", "Clinic", "ER"], unavailable: "", fixed: "" },
+    { name: "Y Gulzar", fte: 0.5, eligible: ["Inpatient", "ER", "Consult"], unavailable: "7", fixed: "" },
+  ];
+  $("scheduleName").value = "Demo: 8-week sample schedule";
+  $("weekCount").value = 8;
+  $("timeLimit").value = 30;
   renderAll();
   saveLocal();
 }
@@ -333,6 +345,7 @@ async function downloadExcel() {
 
 function saveLocal() {
   localStorage.setItem("schedule-studio-config", JSON.stringify({
+    demoVersion: DEMO_VERSION,
     roles: state.roles,
     staff: state.staff,
     setup: {
@@ -348,8 +361,8 @@ function loadConfig(config) {
   state.staff = config.staff || [];
   if (config.setup) {
     $("scheduleName").value = config.setup.name || "New schedule";
-    $("weekCount").value = config.setup.weeks || 26;
-    $("timeLimit").value = config.setup.timeLimit || 120;
+    $("weekCount").value = config.setup.weeks || 8;
+    $("timeLimit").value = config.setup.timeLimit || 30;
   }
   renderAll();
   saveLocal();
@@ -395,7 +408,16 @@ $("importFile").addEventListener("change", async (event) => {
 
 const saved = localStorage.getItem("schedule-studio-config");
 if (saved) {
-  try { loadConfig(JSON.parse(saved)); } catch { loadDemo(); }
+  try {
+    const config = JSON.parse(saved);
+    if (config.demoVersion === DEMO_VERSION) {
+      loadConfig(config);
+    } else {
+      loadDemo();
+    }
+  } catch {
+    loadDemo();
+  }
 } else {
   loadDemo();
 }

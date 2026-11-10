@@ -42,15 +42,15 @@
     <section id="setup" class="panel">
       <div class="section-heading">
         <div><p class="eyebrow">Schedule definition</p><h2>Setup</h2></div>
-        <button class="button ghost" id="loadDemoButton">Load 31-doctor demo</button>
+        <button class="button ghost" id="loadDemoButton">Reset to demo</button>
       </div>
       <div class="form-grid four">
-        <label>Schedule name<input id="scheduleName" value="New 26-week schedule"></label>
-        <label>Number of weeks<input id="weekCount" type="number" min="1" max="52" value="26"></label>
-        <label>Solver time limit (seconds)<input id="timeLimit" type="number" min="5" max="600" value="120"></label>
+        <label>Schedule name<input id="scheduleName" value="Demo: 8-week sample schedule"></label>
+        <label>Number of weeks<input id="weekCount" type="number" min="1" max="52" value="8"></label>
+        <label>Solver time limit (seconds)<input id="timeLimit" type="number" min="5" max="600" value="30"></label>
       </div>
       <div class="callout">
-        Coverage and availability are hard constraints. Workload distribution and spacing are optimized preferences unless you add a fixed assignment.
+        Default demo: 12 doctors, 8 weeks, 8 required services per week. Click <strong>Generate schedule</strong> to get a feasible result in a few seconds. Coverage and availability are hard constraints.
       </div>
     </section>
 
